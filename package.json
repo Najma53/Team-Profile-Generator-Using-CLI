@@ -1,0 +1,29 @@
+{
+  "name": "team-profile-generator-using-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Najma53/Team-Profile-Generator-Using-CLI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Najma53/Team-Profile-Generator-Using-CLI/issues"
+  },
+  "homepage": "https://github.com/Najma53/Team-Profile-Generator-Using-CLI#readme",
+  "dependencies": {
+    "inquirer": "^8.2.5",
+  },
+  "devDependencies": {
+    "jest": "^29.4.1"
+  }
+}
