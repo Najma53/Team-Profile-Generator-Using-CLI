@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest Employee.test.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
