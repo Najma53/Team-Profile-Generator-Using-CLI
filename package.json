@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest Employee.test.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Najma53/Team-Profile-Generator-Using-CLI#readme",
   "dependencies": {
-    "inquirer": "^8.2.5",
+    "inquirer": "^8.2.5"
   },
   "devDependencies": {
     "jest": "^29.4.1"
