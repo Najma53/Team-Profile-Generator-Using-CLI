@@ -14,7 +14,7 @@ const render = require("./src/page-template.js");
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 // Write code in `index.js` that uses inquirer to gather information about the development team members 
 // and creates objects for each team member using the correct classes as blueprints.
-
+const employees = [];  //need this empty array to hold the employess created(manager, intern, engineer). 
 
 // * When a user starts the application then they are prompted to enter the **team manager**’s:
 // * Name
@@ -22,24 +22,97 @@ const render = require("./src/page-template.js");
 // * Email address
 // * Office number
 
-
-
-
+inquirer.prompt([
+    {   
+        type: "input",
+        name: "nameOfManager",
+        message:"Please type the name of the manager"
+},
+    {
+        type: "input",
+        name: "idOfManager",
+        message:"Please type the Id of the manager"
+},
+    {
+        type: "input",
+        name: "emailOfManager",
+        message:"PLease type email of the manager"
+},
+    {
+        type: "input",
+        name: "officeNumberOfManager",
+        message:"Please type the contact office number of the manager"
+} 
+]).then(function(answer){
+    const newManager = new Manager(
+        answer.nameOfManager,
+        answer.idOfManager,
+        answer.emailOfManager,
+        answer.officeNumberOfManager
+        )
+    employees.push(newManager);  //pushing the manager created into the empty employer array
+    ChoiceOptionMenu();
+})
+    
 // * When a user enters those requirements then the user is presented with a menu with the option to:
 //       * Add an engineer
 //       * Add an intern 
 //       * Finish building the team
 
+function ChoiceOptionMenu() {
+    console.log(employees);
 
-
+    inquirer.prompt([
+        {
+            type: "checkbox",
+            name: "choice",
+            message:"Please choose one of the following?",
+            choices:["add Engineer", "add Intern", "Finish building the team"]
+        }   
+      
+]).then(function(answer){
 // * When a user selects the **engineer** option then a user is prompted to enter the 
 // following and then the user is taken back to the menu:
 // * Engineer's Name
 // * ID
 // * Email
 // * GitHub username
+if (response.choice === "add Engineer") {
+    inquirer.prompt([
+        {
+                type: "input",
+                name: "nameOfEngineer",
+                message:"Please type the name of the engineer"
+        },
+        {
+                type: "input",
+                name: "idOfEngineer",
+                message:"Please type the Id of Engineer"
+        },
+        
+        {
+                type: "input",
+                name: "emailOfEngineer",
+                message:"Please type the email of the engineer"
+        },
 
+        {
+                type: "input",
+                name: "githubOfEngineer",
+                message:"PLease type enginner github username"
+        }
 
+    ]).then(function(answer){
+        const newEngineer = new Engineer (
+            answer.nameOfEngineer,
+            answer.idOfEngineer,
+            answer.emailOfEngineer,
+            answer.githubOfEngineer
+            );
+        employees.push(newEngineer);
+        ChoiceOptionMenu(); //start all over again to add another employee
+    })
+}
 
 // * When a user selects the intern option then a user is prompted to enter the following and then the user is taken back to the menu:
 //       * Intern’s name
