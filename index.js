@@ -120,9 +120,43 @@ if (response.choice === "add Engineer") {
 //       * Email
 //       * School
 
+if (response.choice === "add intern") {
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "nameOfIntern",
+            message:"Please type the name of intern"
+        },
+
+        {
+            type: "input",
+            name: "idOfIntern",
+            message:"Please type the Id of Intern"
+        },
+        {
+            type: "input",
+            name: "emailOfIntern",
+            message:"Please type the email of the intern"
+        },
+
+        {
+            type: "input",
+            name: "nameOfInternSchool",
+            message:"Please type the name of school the intern goes toor have gone to"
+        }
 
 
-
+    ]).then(function(answer){
+        const newIntern = new Intern (
+            answer.nameOfIntern,
+            answer.idOfIntern,
+            answer.emailOfIntern,
+            answer.nameOfInternSchool
+            );
+        employees.push(newIntern);
+        ChoiceOptionMenu(); //start all over again to add another employee
+    })
+}
 // * When a user decides to finish building their team then they exit the application, and the HTML is generated.
 
 
