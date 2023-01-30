@@ -67,7 +67,7 @@ function ChoiceOptionMenu() {
             type: "checkbox",
             name: "choice",
             message:"Please choose one of the following?",
-            choices:["add Engineer", "add Intern", "Finish building the team"]
+            choice:["add Engineer", "add Intern", "Finish building the team"]
         }   
       
 ]).then(function(answer){
@@ -77,7 +77,7 @@ function ChoiceOptionMenu() {
 // * ID
 // * Email
 // * GitHub username
-if (response.choice === "add Engineer") {
+if (answer.choice === "add Engineer") {
     inquirer.prompt([
         {
                 type: "input",
@@ -109,7 +109,7 @@ if (response.choice === "add Engineer") {
             answer.emailOfEngineer,
             answer.githubOfEngineer
             );
-        employees.push(newEngineer);
+        employees.push(newEngineer); //pushing engineer to the employee array
         ChoiceOptionMenu(); //start all over again to add another employee
     })
 }
@@ -120,7 +120,7 @@ if (response.choice === "add Engineer") {
 //       * Email
 //       * School
 
-if (response.choice === "add intern") {
+if (answer.choice === "add intern") {
     inquirer.prompt([
         {
             type: "input",
@@ -153,7 +153,7 @@ if (response.choice === "add intern") {
             answer.emailOfIntern,
             answer.nameOfInternSchool
             );
-        employees.push(newIntern);
+        employees.push(newIntern); //pushing intern to the employee array
         ChoiceOptionMenu(); //start all over again to add another employee
     })
 }
