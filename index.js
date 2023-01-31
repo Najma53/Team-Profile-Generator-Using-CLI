@@ -21,7 +21,7 @@ const employees = [];  //need this empty array to hold the employess created(man
 // * Employee ID
 // * Email address
 // * Office number
-
+function init(){
 inquirer.prompt([
     {   
         type: "input",
@@ -51,9 +51,10 @@ inquirer.prompt([
         answer.officeNumberOfManager
         )
     employees.push(newManager);  //pushing the manager created into the empty employer array
-    ChoiceOptionMenu();
+    ChoiceOptionMenu(); //function to add new employee, after the manager added, this function runs 
+                        //have three choices, two to add new employee and one to finish building team
 })
-    
+} 
 // * When a user enters those requirements then the user is presented with a menu with the option to:
 //       * Add an engineer
 //       * Add an intern 
@@ -159,8 +160,22 @@ if (answer.choice === "add intern") {
 }
 // * When a user decides to finish building their team then they exit the application, and the HTML is generated.
 
-
-
+        
+    if(answer.choice === "Finish building the team"){
+        function createTeam() {
+            if (!fs.existsSync(OUTPUT_DIR)) {
+                fs.mkdirSync(OUTPUT_DIR);
+            } 
 
 // * Call the `render` function (provided for you) and pass in an array containing all employee objects; 
 // * The `render` function will generate and return a block of HTML including templated divs for each employee!
+else {
+    fs.writeFileSync(outputPath, render(employees), 'utf-8');
+    console.log('team.html file created in the output folder');
+    }
+}
+    }
+})
+}
+
+init();
