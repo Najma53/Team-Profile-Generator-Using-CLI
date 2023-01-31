@@ -61,6 +61,10 @@ Final product styling with style.css
 
 Working with node and in terminal is a new concept for me. Still getting use to it but overall it is challenging  and fun at the same time.
 
+# Deployed Link
+
+[GitHub](https://github.com/Najma53/Team-Profile-Generator-Using-CLI)
+
 # References 
 These are the references used to create the applicatcation.
 1. Object Oriented JavaScript - [The Net Ninja](https://www.youtube.com/watch?v=4l3bTDlT6ZI&list=PL4cUxeGkcC9i5yvDkJgt60vNVWffpblB7&index=1). It is 11 part series.
