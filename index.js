@@ -162,20 +162,27 @@ if (answer.choice === "add Intern") {
 
         
     if(answer.choice === "Finish building the team"){
-        function createTeam() {
-            if (!fs.existsSync(OUTPUT_DIR)) {
-                fs.mkdirSync(OUTPUT_DIR);
-            } 
+        
+            createTeam();
+            console.log ("team is ready")
+        }
+       
 
 // * Call the `render` function (provided for you) and pass in an array containing all employee objects; 
 // * The `render` function will generate and return a block of HTML including templated divs for each employee!
+
+function createTeam() {
+    if (!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR);
+    } 
+
 else {
     fs.writeFileSync(outputPath, render(employees), 'utf-8');
     console.log('team.html file created in the output folder');
     }
 }
-    }
-})
+
 }
+)}
 
 init();
