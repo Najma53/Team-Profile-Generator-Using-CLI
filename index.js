@@ -65,7 +65,7 @@ function ChoiceOptionMenu() {
 
     inquirer.prompt([
         {
-            type: "checkbox",
+            type: "list",
             name: "choice",
             message:"Please choose one of the following?",
             choice:["add Engineer", "add Intern", "Finish building the team"]
