@@ -176,10 +176,10 @@ function createTeam() {
         fs.mkdirSync(OUTPUT_DIR);
     } 
 
-    // else {
+    
     fs.writeFileSync(outputPath, render(employees), 'utf-8');
     console.log('team.html file created in the output folder');
-    // }
+    
 }
 
 }

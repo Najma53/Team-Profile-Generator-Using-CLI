@@ -22,7 +22,7 @@ This application is a command line application that takes user input based on qu
 1. Make a Repository on github and clone it to your machine using git clone command.
 2. Push Starter code and make sure it contains json package. If json package is missing run npm init -y in terminal.
 3. Check if all json dependencies are installed. This one requires inquirer and jest. If not installed , please install by running npm i inquirer@8 and npm i jest. We need the version 8 of the inquirer. More information on json dependency  inquirer can be found by clicking the [link](https://www.npmjs.com/package/inquirer) and json dependency jest can be found by clicking the [link](https://www.npmjs.com/package/jest)
-4. After all deendencies install, run node index.js in terminal and first question should appear if everything is working okay or else error will pop up.
+4. After all dependencies installed, run node index.js in terminal and first question should appear if everything is working okay or else error will pop up.
 5. To check if jest test are working, type npm run test in terminal. Will let you know if any test has failed or passed.
 
 # Illustration
