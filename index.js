@@ -121,7 +121,7 @@ if (answer.choice === "add Engineer") {
 //       * Email
 //       * School
 
-if (answer.choice === "add intern") {
+if (answer.choice === "add Intern") {
     inquirer.prompt([
         {
             type: "input",
